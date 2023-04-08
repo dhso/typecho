@@ -1,4 +1,0 @@
-
-EXPOSE 80
-
-CMD init_typecho

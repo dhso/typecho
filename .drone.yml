@@ -1,0 +1,20 @@
+kind: pipeline
+name: default
+
+steps:
+
+- name: docker
+  image: plugins/docker
+  settings:
+    registry: registry.hub.docker.com
+    repo: registry.hub.docker.com/dhso/typecho
+    auto_tag: true
+    context: ./
+    dockerfile: Dockerfile
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+    build_args:
+        PUID: 1000
+        PGID: 1000

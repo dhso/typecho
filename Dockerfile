@@ -6,8 +6,8 @@ ENV TYPECHO_URL="https://github.com/typecho/typecho/releases/download/${TYPECHO_
 RUN set -x \
   && mkdir -p /usr/src/typecho \
   && apt-get update && apt-get install -y --no-install-recommends ca-certificates wget && rm -rf /var/lib/apt/lists/* \
-  && wget -O /tmp/typecho.tar.gz "$TYPECHO_URL" \
-  && tar -xzf /tmp/typecho.tar.gz -C /usr/src/typecho/ --strip-components=1 \
+  && wget -O /tmp/typecho.zip "$TYPECHO_URL" \
+  && unzip /tmp/typecho.zip -d /usr/src/typecho/  \
   && apt-get purge -y --auto-remove ca-certificates wget \
   && rm -rf /var/cache/apk/* \
   && rm -rf /tmp/*

@@ -1,6 +1,6 @@
 FROM php:7.4.33-apache
 
-ENV TYPECHO_VERSION=v1.2.0
+ENV TYPECHO_VERSION=v1.2.1
 ENV TYPECHO_URL="https://github.com/typecho/typecho/releases/download/${TYPECHO_VERSION}/typecho.zip"
 
 RUN set -x \

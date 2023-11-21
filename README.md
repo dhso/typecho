@@ -81,3 +81,7 @@ You can mount some local directories to these container directories for persiste
 | `/app/usr/plugins`      | Typecho plugins directory.                                                                         |
 | `/app/usr/themes`       | Typecho themes directory.                                                                          |
 | `/app/usr/uploads`      | Typecho uploads directory.                                                                         |
+
+# build
+
+docker build -f $(pwd)/Dockerfile -t dhso/typecho:latest $(pwd)
